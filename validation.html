@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='bahan/css1/navbar_validation.css'>
+    <link rel="stylesheet" href='bahan/css1/style2.css'>
+    <link rel="stylesheet" href='bahan/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src='bahan/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+ 
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid ">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-inverse fixed-top navbar-nav-scroll">
+            <div class="container">
+                <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="animated-icon1"><span></span><span></span><span></span></div>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <a class="navbar-brand" href="index.html"><img src='img/logo.png'  alt=""></a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link" href="kasir.html">Kasir</a>
+                </li>
+                <li class="nav-item active" >
+                  <a href="validation.html" class="nav-link">Validation</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav navbar-right icons-navbar">
+                <li class="nav-item mr-3">
+                  <i class="fas fa-bell" style="color: white;"></i>
+                </li>
+                <li class="nav-item">
+                <i class="fas fa-rss" style="color: white;"></i>
+                </li>
+              </ul>
+            </div>
+            </div>
+          </nav>
+    </div>
+    <div class="container" style="margin-top: 100px;">
+        <center>
+            <h1>Validasi</h1>
+        </center>
+    <div class="card mt-5 mb-4 shadow">
+        <div class="card-header">
+            <center>
+                <h4>Form Validasi</h4>
+            </center>
+        </div>
+        <div class="card-body m-3">
+        <form  action="validation.html" method="POST" class="needs-validation" novalidate>
+            <!-- @csrf -->
+            <div class="row">
+            <div class="col-lg-6 align-self-center justify-content-center satu">
+                <h3 style="color:brown ;">Contact Me</h3>
+                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Autem, nam corporis voluptatibus aspernatur molestias quos 
+                    ratione repellat quidem magni tempora delectus laudantium fuga quod officiis.</p>
+                <div class="row contact mt-4">
+                    <i class="fas fa-user m-3 mr-5 align-self-center" style="font-size: 25px;"></i>
+                    <div class="info">
+                        <div class="head">
+                            NAME
+                        </div>
+                        <div class="sub-title">
+                            Abdul Aziz
+                        </div>
+                    </div>
+                </div>
+                <div class="row contact mt-4">
+                    <i class="fas fa-map-marker-alt m-3 mr-5 align-self-center" style="font-size: 25px;"></i>
+                    <div class="info">
+                        <div class="head">
+                            LOCATION
+                        </div>
+                        <div class="sub-title">
+                            Cirebon, Jawa Barat
+                        </div>
+                    </div>
+                </div>
+                <div class="row contact mt-4 mb-4">
+                    <i class="fas fa-envelope m-3 mr-5 align-self-center" style="font-size: 25px;"></i>
+                    <div class="info">
+                        <div class="head">
+                            EMAIL
+                        </div>
+                        <div class="sub-title">
+                            dulaziz268@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-0">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="tanggal">Tanggal</label>
+                        <input type="date" name="tanggal" id="tanggal" class="form-control" required>
+                        <div class="invalid-tooltip">
+                            Masukan tanggal !!
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" id="nama" placeholder="Masukan Nama Anda ..." required>
+                        <div class="invalid-tooltip">
+                            Masukan Nama Anda !
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-2 mt-2">
+                        <label for="phone">Phone</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="phoneprepend">+62</span>
+                          </div>
+                          <input type="number" class="form-control" id="phone" placeholder="Masukan nomor telepon ..." aria-describedby="validationTooltipUsernamePrepend" required>
+                          <div class="invalid-tooltip">
+                            harap masukan nomor telepon anda !
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="">Pesan</label>
+                        <textarea class="form-control" name="pesan" id="pesan" cols="1" rows="5" placeholder="Pesan Anda ...." required></textarea>
+                        <div class="invalid-tooltip">
+                            Masukan Pesan Anda !!
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-2">
+                        <label for="email">Send to Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                        <div class="invalid-tooltip">
+                            Masukan email anda ! dan pastikan email anda benar !
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-2">
+                        <h4>Category</h4>
+                            <div class="radio m-4">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="kategory" id="radio1" value="VIP" required>
+                                    <label for="radio1" class="form-check-label">
+                                        VIP
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="kategory" id="radio2" value="premium" required>
+                                    <label for="radio2" class="form-check-label">
+                                    Premium
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="kategory" id="radio3" value="basic" required>
+                                    <label for="radio3" class="form-check-label">
+                                        Basic
+                                    </label>
+                                </div>
+                </div>
+                    </div>
+                    <div class="col-md-6 mt-2">
+                        <h4>Select</h4>
+                        <div class="checkbox m-4">
+                            <div class="form-check">
+                                <input type="checkbox" id="checkbox1" class="form-check-input" value="breakfast" id="category" name="checkbox" >
+                                <label for="checkbox1" class="form-check-label">
+                                    Breakfast
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="checkbox2" class="form-check-input" value="lunch" id="category" name="checkbox" >
+                                <label for="checkbox2" class="form-check-label">
+                                    Lunch
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="checkbox3" class="form-check-input" value="dinner" id="category" name="checkbox" >
+                                <label for="checkbox3" class="form-check-label">
+                                    Dinner
+                                </label>
+                            </div>
+                            <div class="invalid-tooltip">
+                                    harap masukan nomor telepon anda !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-3 justify-content-end">
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                        <button type="submit" class="btn btn-success">Simpan</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </form>
+    </div>
+    </div>
+    <script src='bahan/js/bootstrap.min.js'></script>
+    <script src='bahan/js/jquery.js'></script>
+    <!-- <script src={{ url ("bahan/js/bootstrap.bundle.min.js") }}></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>  
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <script src="http://www.decorplanit.com/plugin/autoNumeric-1.9.41.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> -->
+    <script>
+        $('.carousel').carousel({
+             interval: 10000
+        });
+    </script>
+    <script type="text/javascript">
+		$(window).on("scroll", function(){
+			if($(window).scrollTop() > 50){
+				$(".navbar-inverse").addClass("scroll");
+                $(".navbar-inverse").addClass("shadow");
+			} else {
+				$(".navbar-inverse").removeClass("scroll");
+                $(".navbar-inverse").removeClass("shadow");
+			}
+		});
+	</script>
+    <script>
+        document.querySelector('.first-button').addEventListener('click', function () {
+
+        document.querySelector('.animated-icon1').classList.toggle('open');
+        });
+        document.querySelector('.second-button').addEventListener('click', function () {
+
+        document.querySelector('.animated-icon2').classList.toggle('open');
+        });
+        document.querySelector('.third-button').addEventListener('click', function () {
+
+        document.querySelector('.animated-icon3').classList.toggle('open');
+        });
+    </script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+          Swal.fire(
+                                'Gagal',
+                                'masukan semua data',
+                                'error'
+                                )
+        }else{
+            var tanggal = document.getElementById("tanggal").value
+            var nama = document.getElementById("nama").value
+            var phone = document.getElementById("phone").value
+            var pesan = document.getElementById("pesan").value
+            var email = document.getElementById("email").value
+            Swal.fire(
+                                'Berhasil',
+                                'data berhasil di kirim berikut data anda tanggal = ' + tanggal + ' Nama = ' + nama + ' Phone = ' + phone + ' pesan = ' + pesan + ' Email = ' + email,
+                                'success'
+                                );
+            
+        window.location.assign("/");
+        }
+        form.classList.add('was-validated')
+      }, true)
+    })
+})()
+    </script>
+    
+    <script>
+         function initialize() {
+  var propertiPeta = {
+    center:new google.maps.LatLng(-7.944112, 112.614651),
+    zoom:9,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  
+  var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+  
+  // membuat Marker
+  var marker=new google.maps.Marker({
+      position: new google.maps.LatLng(-7.944112, 112.614651),
+      map: peta
+  });
+
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    <script>
+        $(document).ready(function () {
+    $('#table').DataTable({
+        "bPaginate": false,
+        "bFilter": false,
+        "bInfo": false
+    });
+});
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#jumlah, #harga, #jumlah1, #harga1").keyup(function() {
+                var harga  = $("#harga").val();
+                var jumlah = $("#jumlah").val();
+                var harga1  = $("#harga1").val();
+                var jumlah1 = $("#jumlah1").val();
+                var total = parseInt(harga) * parseInt(jumlah);
+                $("#total").val(total);
+                var total1 = parseInt(harga1) * parseInt(jumlah1);
+                $("#total1").val(total1);
+                var totalsemua = parseInt(total) + parseInt(total1);
+                $("#totalsemua").val(totalsemua);
+                var totalsemua = parseInt(totalsemua);
+
+                function diskon(){
+                // branching discount
+                    if(totalsemua <= 439000 && totalsemua >= 252000){
+                        return discount = 11;
+                    }else if(totalsemua <= 640000 && totalsemua > 439000){
+                        return discount = 21;
+                    }else if(totalsemua >= 640000){
+                        return discount = 35;
+                    }else{
+                        return discount = 0;
+                    }
+                }
+                var diskon = $("#diskon").val(diskon());
+
+                var diskon1 = parseInt($("#diskon").val());
+                var jumlah_diskon = (diskon1 * totalsemua)/100;
+                var jumlah_bayar = (totalsemua - jumlah_diskon);
+                var total_bayar = $("#totalbayar").val(jumlah_bayar);
+                var total_bayar1 = parseInt($("#totalbayar").val());
+
+                var bayar = parseInt($("#bayar").val());
+                var kembalian = parseInt(bayar - total_bayar1);
+
+                (function () {
+                    'use strict'
+
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.querySelectorAll('.needs-validation')
+
+                    // Loop over them and prevent submission
+                    Array.prototype.slice.call(forms)
+                        .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                            Swal.fire(
+                                                    'Gagal',
+                                                    'Isi List Pembelanjaanmu !',
+                                                    'error'
+                                                    )
+                            }else{
+                                var bayar = parseInt(document.getElementById("bayar").value);
+                                var total_bayar = parseInt(document.getElementById("totalbayar").value);
+                                var kembalian = (bayar - total_bayar);
+
+                                if(total_bayar > bayar){
+                                    Swal.fire(
+                                        'Pembayaran Gagal',
+                                        'Uang anda kurang',
+                                        'error'
+                                        );
+                                }else if(total_bayar == bayar){
+                                    Swal.fire(
+                                        'Pembayaran Berhasil',
+                                        'Uang anda pas',
+                                        'success'
+                                        );
+                                    window.location.reload();
+                                }else if(total_bayar < bayar){
+                                Swal.fire(
+                                    'Pembayaran Berhasil',
+                                    'kembalian anda sebesar Rp.' + kembalian,
+                                    'success'
+                                    );
+                                }
+                                
+                            window.location.assign("/kasir");
+                            }
+                            form.classList.add('was-validated')
+                        }, true)
+                        })
+                    })()
+
+
+
+                    // $("#btntotal").click(function(){
+                    //     var bayar = parseInt(document.getElementById("bayar").value);
+                    //     var total_bayar = parseInt(document.getElementById("totalbayar").value);
+                    //     var kembalian = (bayar - total_bayar);
+                    //     var i = 0;
+
+                    //     if(total_bayar == ""){
+                    //         Swal.fire(
+                    //             'Pembayaran Gagal',
+                    //             'Masukan list pembelian anda',
+                    //             'error'
+                    //             );
+                    //     }else if(total_bayar > bayar){
+                    //         Swal.fire(
+                    //             'Pembayaran Gagal',
+                    //             'Uang anda kurang',
+                    //             'error'
+                    //             );
+                    //     }else if(total_bayar == bayar){
+                    //         Swal.fire(
+                    //             'Pembayaran Berhasil',
+                    //             'Uang anda pas',
+                    //             'success'
+                    //             );
+                    //         window.location.reload();
+                    //     }else if(total_bayar < bayar){
+                    //         Swal.fire(
+                    //             'Pembayaran Berhasil',
+                    //             'kembalian anda sebesar Rp.' + kembalian,
+                    //             'success'
+                    //             );
+                    //     }
+                    // });
+
+            });
+            });
+    </script>
+</body>
+<footer style="background-color:#313132 ; color: white;padding: 10px;">
+    <div class="container mt-5 mb-4">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                      <div class="col-lg-6">
+                            <p>Abdul Aziz</p>
+                            <p>Cirebon, 15 Juli 2004</p>
+                            <p>Jln.Ponpes Kempek Kec.Gempol Kab.Cirebon Provinsi Jawa Barat</p>
+                            <img class="align-self-center" src="img/man.png" alt="" width="250px">
+                      </div>
+                      <div class="col-lg-6 mt-5">
+                          <p>Kelas 1A</p>
+                          <p>D2 Pengembangan Piranti Lunak Situs</p>
+                          <p>Teknologi Informasi</p>
+                          <p>Politeknik Negeri Malang</p>
+                          <p>2022</p>
+                          <p>Email :<a href="#" style="text-decoration: none;"> dulaziz268@gmail.com</a></p>
+                          <p>Phone : 081312050947</p>
+                          <div class="row icons-footer">
+                            <a href="https://www.facebook.com"><i class="fab fa-facebook mr-3"></i></a>
+                            <a href="https://www.instagram.com"><i class="fab fa-instagram mr-3"></i></a>
+                            <a href="https://www.youtube.com"><i class="fab fa-youtube mr-3"></i></a>
+                            <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                      </div>
+                </div>
+            </div>
+          <div class="col-lg-6">
+            <h5>Google Maps</h5><br>
+            <div class="shadow" id="googleMap" style="width:100%;height:300px;"></div>
+        </div>
+        </div>
+    </div>
+  </footer>
+  <div class="p-2" style="background-color:black ;width: 100%;">
+    <center class="mt-3" style="color: white;">
+      <p>&copy Copyright 2022 | ABDUL AZIZ</p>
+    </center>
+  </div>
+</html>
